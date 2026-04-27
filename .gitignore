@@ -1,0 +1,11 @@
+node_modules/
+artifacts/*/dist/
+artifacts/*/.vite/
+.cache/
+.local/
+.replit_state/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example

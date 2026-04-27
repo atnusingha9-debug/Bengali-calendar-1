@@ -1,3 +1,0 @@
-# Bengali Calendar
-
-Bootstrapping...

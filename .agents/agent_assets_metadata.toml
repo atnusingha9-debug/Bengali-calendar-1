@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "lqUjcUi5splWhYhyao32D"
+uri = "file://exports/bengali-calendar-source.zip"
+type = "unspecified"
+title = "Source code (upload to GitHub)"
+
+[[outputs]]
+id = "SjatRtavL0fS-qB1C3pvT"
+uri = "file://exports/bengali-calendar-static-site.zip"
+type = "unspecified"
+title = "Prerendered static site (deploy anywhere)"
