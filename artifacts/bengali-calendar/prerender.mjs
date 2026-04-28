@@ -59,9 +59,11 @@ for (const route of routes) {
   console.log(`✓ ${route.path}`);
 }
 
+const SITE_URL = (process.env.SITE_URL || "https://bengalicalender.netlify.app").replace(/\/$/, "");
+
 writeFileSync(
   join(distDir, "robots.txt"),
-  `User-agent: *\nAllow: /\n\nSitemap: /sitemap.xml\n`,
+  `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
 );
 
 const today = new Date().toISOString().slice(0, 10);
@@ -71,7 +73,7 @@ const sitemap =
   sitemapEntries
     .map(
       (p) =>
-        `  <url><loc>${p}</loc><lastmod>${today}</lastmod><changefreq>${
+        `  <url><loc>${SITE_URL}${p}</loc><lastmod>${today}</lastmod><changefreq>${
           p === "/" ? "daily" : "weekly"
         }</changefreq><priority>${p === "/" ? "1.0" : "0.7"}</priority></url>`,
     )
